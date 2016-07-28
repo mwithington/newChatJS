@@ -1,0 +1,211 @@
+<!-- <textarea style="width: 100%; height: 200px" ng-disable="true" ng-model="messageLog"></textarea> -->
+
+
+
+
+
+    <div class="container">
+      <div class="row">
+        <!-- fill in the nav bar here -->
+              
+            <nav class = "navbar navbar-inverse navbar-fixed-top" role = "navigation" >
+   
+               <div class = "navbar-header">
+                  <button type = "button" class = "navbar-toggle" 
+                     data-toggle = "collapse" data-target = "#example-navbar-collapse">
+                     <span class = "sr-only">Toggle navigation</span>
+                     <span class = "icon-bar"></span>
+                     <span class = "icon-bar"></span>
+                     <span class = "icon-bar"></span>
+                  </button>
+                    
+                  <a class = "navbar-brand" href = "/ChatStartPage.html">Home</a>
+               </div>
+               
+               <div class = "collapse navbar-collapse" id = "example-navbar-collapse">
+                
+                  <ul class = "nav navbar-nav">
+                     
+                        
+                     <li class = "dropdown">
+                        <a href = "#" class = "dropdown-toggle" data-toggle = "dropdown">
+                           Place Holder For Menu options
+                           <b class = "caret"></b>
+                        </a>
+                        
+                       
+                        
+                     </li>
+                        
+                  </ul>
+               </div>
+               
+            </nav>
+
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+      </div>
+      <div class="row">
+        <div class="col-md-10 col-md-offset-2">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <span class="glyphicon glyphicon-comment"></span>  WELCOME TO THE CHAT
+                </div>
+                <div class="panel-body" id="panel-body">
+                    <ul class="chat">
+                    
+
+                    <li class="left clearfix"  ng-repeat="message in messageTest track by $index"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&amp;text=G" alt="User Avatar" class="img-circle">
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    <strong class="primary-font">{{message.name}}</strong> <small class="pull-right text-muted">
+                                        <span class="glyphicon glyphicon-time"></span>{{message.date | date:'MM/dd/yyyy @ h:mma'}}</small>
+                                </div>
+                                <p>
+                                    {{message.message}}
+                                </p>
+                            </div>
+                        </li>
+
+
+                        <!-- <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&amp;text=G" alt="User Avatar" class="img-circle">
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    <strong class="primary-font">goldpigeon555</strong> <small class="pull-right text-muted">
+                                        <span class="glyphicon glyphicon-time"></span>12 mins ago</small>
+                                </div>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
+                                    dolor, quis ullamcorper ligula sodales.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="right clearfix"><span class="chat-img pull-right">
+                            <img src="http://placehold.it/50/FA6F57/fff&amp;text=C" alt="User Avatar" class="img-circle">
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    <small class=" text-muted"><span class="glyphicon glyphicon-time"></span>13 mins ago</small>
+                                    <strong class="pull-right primary-font">CaptainJack777</strong>
+                                </div>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
+                                    dolor, quis ullamcorper ligula sodales.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&amp;text=G" alt="User Avatar" class="img-circle">
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    <strong class="primary-font">goldpigeon555</strong> <small class="pull-right text-muted">
+                                        <span class="glyphicon glyphicon-time"></span>14 mins ago</small>
+                                </div>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
+                                    dolor, quis ullamcorper ligula sodales.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="right clearfix"><span class="chat-img pull-right">
+                            <img src="http://placehold.it/50/FA6F57/fff&amp;text=C" alt="User Avatar" class="img-circle">
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    <small class=" text-muted"><span class="glyphicon glyphicon-time"></span>15 mins ago</small>
+                                    <strong class="pull-right primary-font">CaptainJack777</strong>
+                                </div>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
+                                    dolor, quis ullamcorper ligula sodales.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&amp;text=G" alt="User Avatar" class="img-circle">
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    <strong class="primary-font">goldpigeon555</strong> <small class="pull-right text-muted">
+                                        <span class="glyphicon glyphicon-time"></span>14 mins ago</small>
+                                </div>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
+                                    dolor, quis ullamcorper ligula sodales.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&amp;text=G" alt="User Avatar" class="img-circle">
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    <strong class="primary-font">goldpigeon555</strong> <small class="pull-right text-muted">
+                                        <span class="glyphicon glyphicon-time"></span>14 mins ago</small>
+                                </div>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
+                                    dolor, quis ullamcorper ligula sodales.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="right clearfix"><span class="chat-img pull-right">
+                            <img src="http://placehold.it/50/FA6F57/fff&amp;text=C" alt="User Avatar" class="img-circle">
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    <small class=" text-muted"><span class="glyphicon glyphicon-time"></span>15 mins ago</small>
+                                    <strong class="pull-right primary-font">CaptainJack777</strong>
+                                </div>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
+                                    dolor, quis ullamcorper ligula sodales.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="right clearfix"><span class="chat-img pull-right">
+                            <img src="http://placehold.it/50/FA6F57/fff&amp;text=C" alt="User Avatar" class="img-circle">
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    <small class=" text-muted"><span class="glyphicon glyphicon-time"></span>15 mins ago</small>
+                                    <strong class="pull-right primary-font">CaptainJack777</strong>
+                                </div>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
+                                    dolor, quis ullamcorper ligula sodales.
+                                </p>
+                            </div>
+                        </li> -->
+                    </ul>
+                </div>
+                <div class="panel-footer">
+                    <div class="input-group">
+                        <input id="btn-input" type="text" class="form-control input-sm" placeholder="Type your message here..." required ng-max='50' ng-model='message' focus ng-keypress="myFunct($event)">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default btn-sm" id="btn-chat" ng-enable='form.$valid'
+              ng-click="sendMessage(message)">Send</button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+
+
+   <!-- <input type='text' style='width: 80%'
+            required
+            ng-max='50'
+            ng-model='message'
+            focus placeholder="hello man">
+            <button class='btn btn-sm btn-primary'
+              ng-enable='form.$valid'
+              ng-click="sendMessage(message)">Send!</button> -->
