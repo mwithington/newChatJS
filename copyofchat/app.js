@@ -12,6 +12,8 @@ var express = require('express'),
     logger = require('morgan'),
     cookieParser = require('cookie-parser'),
     bodyParser = require('body-parser');
+var db = ['hello'];
+
 
 // set up our JSON API for later
 require('./routes/api')(app);
@@ -23,7 +25,7 @@ require('./sockets/base')(io);
 server.listen(3000);
 
 // optional - set socket.io logging level
-io.set('log level', 1000);
+//io.set('log level', 1000);
 
 // view engine setup (for later)
 app.set('views', path.join(__dirname, 'views'));
@@ -31,9 +33,11 @@ app.set('view engine', 'jade');
 
 // middleware settings
 app.use(favicon());
-app.use(logger('dev'));
-app.use(bodyParser.json());
+//app.use(logger('dev'));
 app.use(bodyParser.urlencoded());
+app.use(bodyParser.json());
+var urlencodedParser = bodyParser.urlencoded({ extended: false });
+
 app.use(cookieParser());
 app.use(require('stylus').middleware(path.join(__dirname, 'public')));
 
@@ -45,12 +49,30 @@ app.use(express.static(__dirname +  '/angular-frontend/app/'));
 
 //app.use(express.static(__dirname +  '/public'));
 
+
+
+io.on('connection', function (socket) {
+
+ socket.on('message', function (from, msg) {
+
+      console.log(db);
+    });
+
+});
+
+
 /// catch 404 and forwarding to error handler
 app.use(function (req, res, next) {
   var err = new Error('Not Found');
   err.status = 404;
   next(err);
 });
+
+
+
+
+
+
 
 /// error handlers
 
